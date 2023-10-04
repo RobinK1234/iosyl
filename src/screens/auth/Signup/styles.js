@@ -8,7 +8,8 @@ export const styles = StyleSheet.create ({
     },
     agreeRow: {
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingBottom: 16,
     },
     agreeText: {
         color: colors.blue,
