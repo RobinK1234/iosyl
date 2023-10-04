@@ -8,7 +8,8 @@ export const styles = StyleSheet.create ({
     },
     agreeRow: {
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingBottom: 16,
     },
     agreeText: {
         color: colors.blue,
@@ -19,5 +20,13 @@ export const styles = StyleSheet.create ({
     },
     button: {
         marginVertical: 20
+    },
+    footerText: {
+        color: colors.blue,
+        marginBottom: 56,
+        textAlign: 'center'
+    },
+    footerLink: {
+        fontWeight: 'bold'
     }
 })
