@@ -1,15 +1,20 @@
 import React from "react";
-import { View, FlatList } from "react-native"
+import { View, FlatList, navigation, navigate } from "react-native"
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from "./styles";
 import { products } from "…./../../data/products";
 import FavoriteItem from "…./../../components/FavoriteItem";
 import Header from "../../../components/Header";
 
-    const Favorites = () => {
+    const Favorites = ({navigation}) => {
         const renderItem = ({item}) => {
+
+            const onProductPress = () => {
+                navigation.navigate('ProductDetails', {product: item})
+            }
+
             return (
-                <FavoriteItem
+                <FavoriteItem onPress={onProductPress}
                     {...item}
                 />)
         }

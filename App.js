@@ -14,6 +14,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { colors } from "./src/utils/colors";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import ProductDetails from "./src/screens/app/ProductDetails";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -71,6 +72,7 @@ const theme = {
       { isSignedIn ? (
         <>
         <Stack.Screen name="Tabs" component={Tabs} options={{headerShown: false}}/>
+        <Stack.Screen name="ProductDetails" component={ProductDetails} options={{headerShown: false}}/>
         </>
       ) : (
       <>
